@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name">
+        <!-- the for loop by Jinja -->
+        <!-- sports here is just a variable name for list -->
+        {% for ele in sports %}
+            <input name="sport" type="radio" value="{{ ele }}">{{ ele }}
+        {% endfor %}
+        <button type="submit">Register</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <table>
+        <thead>
+            <tr class="table_border table_header">
+                <th>Stocks Owned</th>
+                <th>Shares</th>
+                <th>Price per share</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody class="border">
+            {% for ele in list %}
+            <tr>
+                <td>{{ ele["symbol"] }} </td>
+                <!-- dont forget to use usd() for following -->
+                <td>{{ ele["no"] }} </td>
+                <td>{{ ele["price"] }} </td>
+                <!-- dont forget to use usd() for following -->
+                <td>{{ ele["amt"] }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr class="table_border table_footer" >
+                <th>TOTAL </th>
+                <th>{{ data[0]["qty"] }}</th>
+                <th>{{ data[0]["price"] }}</th>
+                <th> {{ data[0]["total"] }} </th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th class="table_border">Balance: </th>
+                <!-- dont forget to use usd() for following -->
+                <th class="table_border">{{ bal }}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th class="table_border">Total: </th>
+                <!-- dont forget to use usd() for following -->
+                <th class="table_border">{{ total }}</th>
+            </tr>
+        </tfoot>
+    </table>
+
+{% endblock %}

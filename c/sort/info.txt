@@ -1,0 +1,46 @@
+sort1, random 5000:     sort1, sorted 5000:
+    real    0m0.062s        real    0m0.040s
+    user    0m0.031s        user    0m0.000s
+    sys     0m0.030s        sys     0m0.029s
+
+sort2, random 5000:     sort2, sorted 5000:
+    real    0m0.035s        real    0m0.030s
+    user    0m0.004s        user    0m0.004s
+    sys     0m0.026s        sys     0m0.026s
+
+sort3, random 5000:
+    real    0m0.059s
+    user    0m0.023s
+    sys     0m0.027s
+____________________
+
+sort1, random 10000:
+    real    0m0.247s
+    user    0m0.147s
+    sys     0m0.057s
+
+sort2, random 10000:
+    real    0m0.076s
+    user    0m0.000s
+    sys     0m0.056s
+
+sort3, random 10000:
+    real    0m0.127s
+    user    0m0.069s
+    sys     0m0.049s
+____________________
+sort1, random 50000:    sort1, sorted 50000:    sort1, reversed 50000:
+    real    0m6.559s        real    0m1.222s        real    0m5.819s
+    user    0m5.112s        user    0m0.028s        user    0m4.453s
+    sys     0m0.255s        sys     0m0.236s        sys     0m0.260s
+
+sort2, random 50000:    sort2, sorted 50000:    sort2, reversed 50000:
+    real    0m1.055s        real    0m0.585s        real    0m0.513s
+    user    0m0.030s        user    0m0.034s        user    0m0.045s
+    sys     0m0.250s        sys     0m0.237s        sys     0m0.223s
+
+sort3, random 50000:    sort3, sorted 50000:    sort3, reversed 50000:
+    real    0m2.663s        real    0m2.500s        real    0m2.554s
+    user    0m1.842s        user    0m1.752s        user    0m2.011s
+    sys     0m0.270s        sys     0m0.259s        sys     0m0.283s
+____________________
