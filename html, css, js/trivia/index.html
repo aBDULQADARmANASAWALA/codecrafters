@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>TRIVIA!</h1>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            // wait for everything to get loaded
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // for the FIRST PART
+                // store the "correct" id element into the below "correct" variable
+                // just so that i dont have to type long things
+                let correct = document.querySelector(".correct");
+
+                // checking if clicked
+                correct.addEventListener("click", function() {
+                    // changing color and commenting
+                    correct.style.color = "white";
+                    correct.style.backgroundColor = "green";
+                    document.getElementById("answer").innerHTML = "Correct";
+                });
+
+                // storing the "incorrect" id elements into the below incorrects ARRAY
+                // as the querySelectorAll returns a list of items as array
+                let incorrects = document.querySelectorAll(".incorrect");
+
+                // looping thru all the elements of the above array
+                for (let i = 0; i < incorrects.length; i++) {
+                    // checking if clicked
+                    incorrects[i].addEventListener("click", function() {
+                        // changing the color and commenting
+                        incorrects[i].style.backgroundColor = "red";
+                        incorrects[i].style.color = "white";
+                        document.getElementById("answer").innerHTML = "Incorrect";
+                    });
+                }
+
+                // now for the SECOND PART
+                // checking if clicked
+                document.querySelector("#submit").addEventListener("click", function() {
+
+                    // for shortforms
+                    let text = document.querySelector("#text");
+
+                    // checking for the answer "text"
+                    if (text.value == "swiss") {
+                        // changing bgcolor and commenting
+                        text.style.backgroundColor = "green";
+                        text.style.color = "white";
+                        document.getElementById("answer2").innerHTML = "Correct";
+                    } else {
+                        // changing bgcolor and commenting
+                        text.style.backgroundColor = "red";
+                        text.style.color = "white";
+                        document.getElementById("answer2").innerHTML = "Incorrect";
+                    }
+                });
+            });
+        </script>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the color of the stripes on a zebra?</h3>
+
+                <button type="button" class="incorrect">Green</button>
+                <button type="button" class="incorrect">Black</button>
+                <button type="button" class="correct">White</button>
+                <button type="button" class="incorrect">Blue</button>
+                <button type="button" class="incorrect">Red</button>
+                <p id="answer"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <h4>(Please input lower-case only!)</h4>
+
+                <form onsubmit="return false;">
+                    <input type="text" id="text">
+                    <button id="submit">Check Answer</button>
+                </form>
+                <p id="answer2"></p>
+            </div>
+        </div>
+    </body>
+
+</html>

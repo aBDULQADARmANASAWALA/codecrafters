@@ -1,0 +1,45 @@
+/* 5 different CSS Selectors and Properties */
+body {
+    font-family: cursive;
+    font-size:1.2rem;
+    background-color: antiquewhite;
+}
+
+nav {
+    background-color:burlywood;
+    font-family: algerian;
+    font-size:2rem;
+    margin: 1rem;
+    border-radius:1em;
+    text-align: center;
+}
+
+nav a {
+    margin: 2rem;
+}
+
+#name {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+}
+
+.card {
+    background-color: #f7ddbb;
+}
+
+#copyrightSmall {
+    font-size:0.8rem;
+}
+
+#copyright {
+    font-size: 1rem;
+}
+
+#header{
+    width: fit-content;
+}
+
+img {
+    width: 100%;
+}

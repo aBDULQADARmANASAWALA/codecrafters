@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h4> A share of <span class="quote">{{ list["symbol"] }}</span> costs <span class="quote">{{ list["price"] }}</span> </h4> <br>
+    <a href="/quote"> <button autofocus class="btn btn-primary">Quote again</button></a>
+{% endblock %}

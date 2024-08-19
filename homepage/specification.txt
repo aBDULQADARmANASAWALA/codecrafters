@@ -1,0 +1,2 @@
+the 10 HTML tags and 5 CSS properties
+description of how you chose to use JavaScript and Bootstrap
